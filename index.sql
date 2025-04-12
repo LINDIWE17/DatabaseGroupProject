@@ -127,3 +127,22 @@ INSERT INTO cust_order (customer_id, order_status_id, shipping_method_id) VALUES
 INSERT INTO order_line (order_id, book_id, quantity) VALUES 
 (1, 3, 1), 
 (2, 1, 2); 
+
+-- --------------------------------------------
+-- USER ROLES & PRIVILEGES SETUP FOR BookStoredb
+-- --------------------------------------------
+
+-- Admin: Full control (DDL + DML)
+CREATE USER 'admin'@'localhost' IDENTIFIED BY 'AdminSecurePass123';
+GRANT ALL PRIVILEGES ON BookStoredb.* TO 'admin'@'localhost';
+
+-- Developer: Read and write access to all data
+CREATE USER 'developer'@'localhost' IDENTIFIED BY 'DevPass456';
+GRANT SELECT, INSERT, UPDATE, DELETE ON BookStoredb.* TO 'developer'@'localhost';
+
+-- Read-Only: Can only read data from any table
+CREATE USER 'readonly_user'@'localhost' IDENTIFIED BY 'ReadOnly789';
+GRANT SELECT ON BookStoredb.* TO 'readonly_user'@'localhost';
+
+-- Apply changes
+FLUSH PRIVILEGES;
