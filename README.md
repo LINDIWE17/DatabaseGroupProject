@@ -2,7 +2,7 @@
 
 # 📚 BookStoredb
 
-**BookStoredb** is a relational database designed to efficiently manage a bookstore's key operations. It includes functionality for tracking books, authors, publishers, and languages, as well as handling customer information, addresses, and orders. The database also supports order processing, including shipping methods and statuses. With its well-structured tables and relationships, it allows for streamlined management of inventory, customer data, and orders, making it a powerful solution for running a bookstore.
+**BookStoredb** is a relational database designed to efficiently manage a bookstore's key operations. It includes functionality for tracking books, authors, publishers, and languages, as well as handling customer information, addresses, and orders. The database also supports order processing, including shipping methods, statuses and role-based access control.  With its well-structured tables and relationships, it allows for streamlined management of inventory, customer data, and orders, making it a powerful solution for running a bookstore.
 
 ## 🔧 Technologies Used
 - **Database:** MySQL
